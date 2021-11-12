@@ -20,7 +20,7 @@ geotab.addin.eventsBlock = function () {
 
     function populateEvents(callback) {
 
-        let divId = textMessageId + '-' + Date.now(),
+        let divId = Date.now(),
             headerElement = document.createElement('h4'),
             textElement = document.createTextNode('Sent: ' + new Date());
 
