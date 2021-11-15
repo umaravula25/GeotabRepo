@@ -49,10 +49,16 @@ geotab.addin.eventsBlock = function () {
             td.width='75';
             td.appendChild(document.createTextNode(EventsList[i].displayname));
             tr.appendChild(td);
+            var td = document.createElement('TD');
+            td.width='75';
             td.appendChild(document.createTextNode(EventsList[i].registrationNumber));
             tr.appendChild(td);
+            var td = document.createElement('TD');
+            td.width='75';
             td.appendChild(document.createTextNode(EventsList[i].eventType));
             tr.appendChild(td);
+            var td = document.createElement('TD');
+            td.width='75';
             td.appendChild(document.createTextNode(EventsList[i].address));
             tr.appendChild(td);
             /**for (var j=0; j<4; j++){
