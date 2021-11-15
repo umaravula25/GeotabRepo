@@ -40,16 +40,10 @@ geotab.addin.eventsBlock = function () {
         for (var i=0; i< EventsList.length; i++){
             var tr = document.createElement('TR');
             tableBody.appendChild(tr);
-            var td = document.createElement('TD');
-            td.width='75';
-            td.appendChild(document.createTextNode(EventsList[i].displayname));
-            tr.appendChild(td);
-            td.appendChild(document.createTextNode(EventsList[i].RegistrationNumber));
-            tr.appendChild(td);
-            td.appendChild(document.createTextNode(EventsList[i].ClassificationName));
-            tr.appendChild(td);
-            td.appendChild(document.createTextNode(EventsList[i].Address));
-            tr.appendChild(td);
+            tr.append("<td width=\"75\">" + EventsList[i].displayname + "</td>")
+            tr.append("<td width=\"75\">" + EventsList[i].RegistrationNumber + "</td>")
+            tr.append("<td width=\"75\">" + EventsList[i].ClassificationName + "</td>")
+            tr.append("<td width=\"75\">" + EventsList[i].Address + "</td>")
             /**for (var j=0; j<4; j++){
                 var td = document.createElement('TD');
                 td.width='75';
