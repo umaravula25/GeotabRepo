@@ -40,13 +40,19 @@ geotab.addin.eventsBlock = function () {
         for (var i=0; i< EventsList.length; i++){
             var tr = document.createElement('TR');
             tableBody.appendChild(tr);
-       
-            for (var j=0; j<4; j++){
+            var td = document.createElement('TD');
+            td.width='75';
+            td.appendChild(document.createTextNode(EventsList[i].displayname));
+            td.appendChild(document.createTextNode(EventsList[i].RegistrationNumber));
+            td.appendChild(document.createTextNode(EventsList[i].ClassificationName));
+            td.appendChild(document.createTextNode(EventsList[i].Address));
+            tr.appendChild(td);
+            /**for (var j=0; j<4; j++){
                 var td = document.createElement('TD');
                 td.width='75';
                 td.appendChild(document.createTextNode(EventsList[i].displayname));
                 tr.appendChild(td);
-            }
+            }*/
         }
         myTableDiv.appendChild(table);
     }
