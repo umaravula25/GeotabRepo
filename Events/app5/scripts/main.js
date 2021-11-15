@@ -40,10 +40,21 @@ geotab.addin.eventsBlock = function () {
         for (var i=0; i< EventsList.length; i++){
             var tr = document.createElement('TR');
             tableBody.appendChild(tr);
-            tr.appendChild('<td width="75">' + EventsList[i].displayname + '</td>')
-            tr.appendChild('<td width="75">' + EventsList[i].registrationNumber + '</td>')
-            tr.appendChild('<td width="75">' + EventsList[i].eventType + '</td>')
-            tr.appendChild('<td width="75">' + EventsList[i].address + '</td>')
+            //tr.append('<td width="75">' + EventsList[i].displayname + '</td>')
+            //tr.append('<td width="75">' + EventsList[i].registrationNumber + '</td>')
+            //tr.append('<td width="75">' + EventsList[i].eventType + '</td>')
+            //tr.append('<td width="75">' + EventsList[i].address + '</td>')
+
+            var td = document.createElement('TD');
+            td.width='75';
+            td.appendChild(document.createTextNode(EventsList[i].displayname));
+            tr.appendChild(td);
+            td.appendChild(document.createTextNode(EventsList[i].registrationNumber));
+            tr.appendChild(td);
+            td.appendChild(document.createTextNode(EventsList[i].eventType));
+            tr.appendChild(td);
+            td.appendChild(document.createTextNode(EventsList[i].address));
+            tr.appendChild(td);
             /**for (var j=0; j<4; j++){
                 var td = document.createElement('TD');
                 td.width='75';
