@@ -41,8 +41,21 @@ geotab.addin.mediaBlock = function () {
         //for (var i=0; i< mediaList.length; i++){ }
         videoUrl = mediaList[0].videos[0].blobUrl;
         myTableDiv.appendChild(table);
-
+        var vidContainer = document.getElementById("vidContainer");
+        vidContainer.innerHTML = '';
+        for (var i=0; i< mediaList.length; i++){ 
+            var vid = document.createElement('video');
+            vid.setAttribute("autoplay", "");
+            vid.setAttribute("loop", "");
+            vid.setAttribute("controls", "");
+            vid.setAttribute("id", "video" + i);
+            vid.setAttribute("src", mediaList[0].videos[i].blobUrl);
+            vid.setAttribute("width", "640");
+            vid.setAttribute("height", "360");
+            vidContainer.appendChild(vid);
+        }
         //Building the Video Tag
+        /*
         var vidContainer = document.getElementById("vidContainer");
         vidContainer.innerHTML = '';
         var vid = document.createElement('video');
@@ -54,6 +67,7 @@ geotab.addin.mediaBlock = function () {
         vid.setAttribute("width", "640");
         vid.setAttribute("height", "360");
         vidContainer.appendChild(vid);
+        */
     }
 
     return {
