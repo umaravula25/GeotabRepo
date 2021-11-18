@@ -43,7 +43,7 @@ geotab.addin.mediaBlock = function () {
         myTableDiv.appendChild(table);
         var vidContainer = document.getElementById("vidContainer");
         vidContainer.innerHTML = '';
-        for (var i=0; i< mediaList.length; i++){ 
+        for (var i=0; i< mediaList[0].videos.length; i++){ 
             var vid = document.createElement('video');
             vid.setAttribute("autoplay", "");
             vid.setAttribute("loop", "");
