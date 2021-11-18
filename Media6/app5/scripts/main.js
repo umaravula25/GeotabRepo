@@ -53,7 +53,7 @@ geotab.addin.mediaBlock = function () {
         vid.setAttribute("src", videoUrl);
         vid.setAttribute("width", "640");
         vid.setAttribute("height", "360");
-        container.appendChild(vid);
+        vidContainer.appendChild(vid);
     }
 
     return {
