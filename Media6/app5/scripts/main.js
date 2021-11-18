@@ -41,6 +41,19 @@ geotab.addin.mediaBlock = function () {
         //for (var i=0; i< mediaList.length; i++){ }
         videoUrl = mediaList[0].videos[0].blobUrl;
         myTableDiv.appendChild(table);
+
+        //Building the Video Tag
+        var vidContainer = document.getElementById("vidContainer");
+        vidContainer.innerHTML = '';
+        var vid = document.createElement('video');
+        vid.setAttribute("autoplay", "");
+        vid.setAttribute("loop", "");
+        vid.setAttribute("controls", "");
+        vid.setAttribute("id", "video");
+        vid.setAttribute("src", videoUrl);
+        vid.setAttribute("width", "640");
+        vid.setAttribute("height", "360");
+        container.appendChild(vid);
     }
 
     return {
